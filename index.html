@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masud Rana | AI Automation Specialist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* আগের স্টাইল ঠিক রাখা হয়েছে, কোনো চেঞ্জ নেই */
+    :root {
+      --bg: #0a0a1f;
+      --neon-purple: #a020f0;
+      --neon-cyan: #00faff;
+      --neon-pink: #ff00d9;
+      --card-bg: rgba(20, 20, 50, 0.6);
+      --glow: 0 0 20px rgba(160, 32, 240, 0.6);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: #e0e0ff;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,31,0.85);
+      backdrop-filter: blur(10px);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(160,32,240,0.3);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    nav a {
+      color: var(--neon-cyan);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: var(--neon-pink); text-shadow: 0 0 15px var(--neon-pink); }
+
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      background: linear-gradient(to bottom, rgba(10,10,31,0.9), var(--bg));
+    }
+
+    .hero-content {
+      max-width: 1100px;
+    }
+
+    .hero-title {
+      font-size: 5.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    .hero-desc {
+      font-size: 1.6rem;
+      margin: 2rem 0 3rem;
+      color: #c0c0ff;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .btn {
+      background: transparent;
+      border: 3px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      padding: 1.2rem 3rem;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: 0.4s;
+      text-shadow: 0 0 12px var(--neon-cyan);
+      box-shadow: var(--glow);
+    }
+
+    .btn:hover {
+      background: var(--neon-cyan);
+      color: black;
+      box-shadow: 0 0 60px var(--neon-cyan);
+      transform: scale(1.08);
+    }
+
+    .hero-img {
+      width: 340px;
+      border-radius: 28px;
+      margin-top: 3rem;
+      box-shadow: 0 0 60px rgba(160,32,240,0.9);
+      border: 4px solid var(--neon-purple);
+    }
+
+    section { padding: 12rem 5%; }
+
+    h2 {
+      text-align: center;
+      font-size: 4.5rem;
+      margin-bottom: 5rem;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    .projects-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .workflow-img {
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 24px;
+      box-shadow: 0 0 60px rgba(0,255,255,0.6);
+      border: 4px solid var(--neon-cyan);
+      margin: 3rem auto;
+      display: block;
+    }
+
+    .project-desc {
+      font-size: 1.5rem;
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      color: #d0d0ff;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      border: 2px solid var(--neon-purple);
+      text-align: center;
+      transition: 0.5s;
+      box-shadow: var(--glow);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 0 80px var(--neon-purple);
+    }
+
+    .skill-card h3 {
+      color: var(--neon-cyan);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .skill-card p {
+      color: #b0b0ff;
+      font-size: 1.2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-info p {
+      font-size: 1.4rem;
+      margin: 1.5rem 0;
+      color: #c0c0ff;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 1.4rem;
+      margin: 1.4rem 0;
+      background: rgba(30,30,60,0.8);
+      border: 2px solid var(--neon-purple);
+      border-radius: 16px;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    form button {
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+      color: white;
+      border: none;
+      padding: 1.4rem 4rem;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: 0.4s;
+      box-shadow: var(--glow);
+    }
+
+    form button:hover { transform: scale(1.08); box-shadow: 0 0 80px var(--neon-cyan); }
+
+    footer {
+      text-align: center;
+      padding: 5rem;
+      background: rgba(10,10,31,0.95);
+      border-top: 3px solid var(--neon-purple);
+      color: #a0a0ff;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Masud Rana</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">AI Automation Specialist</h1>
+      <p class="hero-desc">
+        <strong>প্রতিদিন ১০ ঘণ্টা করে ম্যানুয়াল কাজে আটকে আছেন?</strong><br><br>
+        আমি সেইসব কাজকে n8n + AI দিয়ে <strong>৯৫% অটোমেট করে দিই</strong> — যাতে আপনার টিমের সময় বাঁচে, খরচ কমে এবং ব্যবসা দ্রুত ৩–৫ গুণ বাড়তে পারে।<br><br>
+        লিড কোয়ালিফিকেশন, কাস্টমার সাপোর্ট, কনটেন্ট রিপারপোজিং, ইনভয়েস + পেমেন্ট অটোমেশন, ডেটা অ্যানালাইসিস — <strong>সবকিছু ২৪/৭ চলতে থাকে আপনার ঘুমের মধ্যেও</strong>।<br><br>
+        <strong>ফলাফল?</strong> ক্লায়েন্টরা বলে: “আমার ব্যবসা আগের চেয়ে অনেক সহজ এবং লাভজনক হয়ে গেছে!”
+      </p>
+      <button class="btn">আজই আপনার ব্যবসা অটোমেট করুন →</button>
+    </div>
+    <img src="https://i.imgur.com/your-photo-here.jpg" alt="Masud Rana" class="hero-img"> <!-- তোমার ছবি -->
+  </section>
+
+  <section id="projects">
+    <h2>AI Automation Projects</h2>
+    <div class="projects-container">
+      <img src="https://i.imgur.com/your-n8n-workflow.jpg" alt="n8n Workflow" class="workflow-img">
+      <p class="project-desc">
+        এই workflow-এর মাধ্যমে ওয়েবসাইট ফর্ম থেকে লিড আসছে → AI সেকেন্ডের মধ্যে কোয়ালিফাই করছে → যোগ্য লিড সরাসরি CRM-এ যাচ্ছে + সেলস টিম Slack-এ instant alert পাচ্ছে।<br><br>
+        <strong>রেজাল্ট:</strong> ম্যানুয়াল কাজ ৭৫% কমেছে, কনভার্সন রেট ৪২% বেড়েছে, এবং ক্লায়েন্ট বলছে “এখন আর লিড মিস হয় না”।
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>n8n Mastery</h3>
+        <p>Complex multi-branch workflows, error recovery, AI nodes, 400+ integrations</p>
+      </div>
+      <div class="skill-card">
+        <h3>AI & LLM Power</h3>
+        <p>LangChain, OpenAI, Gemini, prompt engineering — reliable, accurate results every time</p>
+      </div>
+      <div class="skill-card">
+        <h3>Custom Code & APIs</h3>
+        <p>Python, JavaScript, REST/Webhook, custom nodes — যেকোনো সিস্টেম কানেক্ট করা যায়</p>
+      </div>
+      <div class="skill-card">
+        <h3>Business Growth Focus</h3>
+        <p>Lead gen, customer support, content automation, invoice, analytics — সবকিছুতে real ROI</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>আপনার ব্যবসা পরবর্তী লেভেলে নিয়ে যেতে চান?</h3>
+        <p>শুধু একটা কল দিন — আমি ৩০ মিনিটের ফ্রি কল-এ আপনাকে দেখিয়ে দিব কীভাবে আপনার সবচেয়ে সময় নেওয়া কাজটি অটোমেট করে আপনি প্রতি মাসে ৫০–১০০ ঘণ্টা বাঁচাতে পারেন।</p>
+        <p><strong>Email:</strong> masudrana@example.com</p>
+        <p><strong>WhatsApp/Phone:</strong> +880 17XX-XXXXXX</p>
+        <p><strong>আজই মেসেজ করুন</strong> — আপনার প্রথম অটোমেশন ফ্রি অডিট করে দিচ্ছি!</p>
+      </div>
+      <form>
+        <input type="text" placeholder="আপনার নাম" required>
+        <input type="email" placeholder="আপনার ইমেইল" required>
+        <textarea rows="8" placeholder="আপনার ব্যবসার কোন কাজটি সবচেয়ে বেশি সময় নিচ্ছে? (যেমন: লিড ফলোআপ, কনটেন্ট পোস্টিং, ইনভয়েস, সাপোর্ট...)" required></textarea>
+        <button type="submit">এখনই কথা বলুন</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Masud Rana • AI Automation Specialist • ব্যবসার সময় বাঁচানো এবং দ্রুত বৃদ্ধি — এটাই আমার প্রতিশ্রুতি</p>
+  </footer>
+
+</body>
+  </html>
